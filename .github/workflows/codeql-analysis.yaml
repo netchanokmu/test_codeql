@@ -28,11 +28,11 @@ jobs:
       uses: github/codeql-action/init@v2
       with:
         languages: ${{ matrix.language }}
-        
+
     - name: Install CodeQL CLI
       run: |
         # Download and install CodeQL CLI
-        wget https://github.com/github/codeql-cli-binaries/releases/download/v2.22.7/codeql-linux64.zip
+        wget https://github.com/github/codeql-cli-binaries/releases/download/v2.15.2/codeql-linux64.zip
         unzip -j codeql-linux64.zip -d /usr/local/bin
         rm codeql-linux64.zip
         codeql --version  # Verify installation
