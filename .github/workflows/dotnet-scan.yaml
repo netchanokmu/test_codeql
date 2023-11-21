@@ -41,7 +41,7 @@ jobs:
           dotnet-version: '6.0.x'
           
       - name: Extract and upload compilation database
-        run: codeql database prepare --language=csharp --output=/dotnet-code-folder/db
+        run: /usr/local/bin/codeql codeql database prepare --language=csharp --output=/dotnet-code-folder/db
 
       - name: Analyze
-        run: codeql database analyze /dotnet-code-folder/db ${{ matrix.language }}-security-extended.qls
+        run: /usr/local/bin/codeql codeql database analyze /dotnet-code-folder/db ${{ matrix.language }}-security-extended.qls
