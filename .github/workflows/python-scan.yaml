@@ -1,0 +1,36 @@
+name: "CodeQL scan python"
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ masters ]
+
+jobs:
+  analyze:
+    name: Analyze
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [ 'python' ]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v2
+
+      - name: Autobuild
+        uses: github/codeql-action/autobuild@v2
+
+      - name: Perform CodeQL Analysis for Python
+        uses: github/codeql-action/analyze@v2
+        with:
+          paths: python-code-folder
