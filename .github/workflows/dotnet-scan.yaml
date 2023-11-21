@@ -34,10 +34,8 @@ jobs:
         with:
           dotnet-version: '6.0.x'
           
-      - name: Autobuild
-        uses: github/codeql-action/autobuild@v2
+      - name: Extract and upload compilation database
+        run: codeql database prepare --language=csharp --output=/dotnet-code-folder/db
 
-      - name: Perform CodeQL Analysis for .NET
-        uses: github/codeql-action/analyze@v2
-        with:
-          checkout_path: dotnet-code-folder
+      - name: Analyze
+        run: codeql database analyze /dotnet-code-folder/db ${{ matrix.language }}-security-extended.qls
