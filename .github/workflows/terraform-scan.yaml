@@ -24,4 +24,4 @@ jobs:
         id: codeql_iac
         uses: advanced-security/codeql-extractor-iac@main
         with:
-          terraform_path: terraform-code-folder
+          source-root: terraform-code-folder
