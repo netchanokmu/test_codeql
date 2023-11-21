@@ -29,8 +29,10 @@ jobs:
         with:
           languages: ${{ matrix.language }}
 
-      - name: Autobuild
-        uses: github/codeql-action/autobuild@v2
+      - name: Build java
+        run: |
+              make bootstrap
+              make release
 
       - name: Perform CodeQL Analysis for Python
         uses: github/codeql-action/analyze@v2
