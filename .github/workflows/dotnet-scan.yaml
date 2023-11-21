@@ -27,13 +27,13 @@ jobs:
       - name: Initialize CodeQL for .NET
         uses: github/codeql-action/init@v2
         with:
-          languages: ${{ matrix.language }
+          languages: ${{ matrix.language }}
 
-      # - name: Setup dotnet
-      #   uses: actions/setup-dotnet@v1
-      #   with:
-      #     dotnet-version: '6.0.x'
-
+      - name: Setup dotnet
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '6.0.x'
+          
       - name: Autobuild
         uses: github/codeql-action/autobuild@v2
 
