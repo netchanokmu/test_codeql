@@ -18,7 +18,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        language: [ 'java' ]
+        language: ['java']
 
     steps:
       - name: Checkout repository
@@ -29,9 +29,8 @@ jobs:
         with:
           languages: ${{ matrix.language }}
 
-      - name: Build java
-        run: |
-          ./gradlew :java-code-folder:build
+      - name: Autobuild
+        uses: github/codeql-action/autobuild@v2
 
       - name: Perform CodeQL Analysis for Python
         uses: github/codeql-action/analyze@v2
