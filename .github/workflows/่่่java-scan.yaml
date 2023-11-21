@@ -32,7 +32,7 @@ jobs:
       - name: Autobuild
         uses: github/codeql-action/autobuild@v2
 
-      - name: Perform CodeQL Analysis for Python
+      - name: Perform CodeQL Analysis for Java
         uses: github/codeql-action/analyze@v2
         with:
           checkout_path: java-code-folder
