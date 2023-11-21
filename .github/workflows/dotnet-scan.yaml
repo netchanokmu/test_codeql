@@ -24,6 +24,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      - name: Download and install CodeQL
+        run: |
+          curl -sSL https://github.com/github/codeql-cli-binaries/releases/download/v2.15.2/codeql-linux64.zip -o codeql-linux64.zip
+          unzip -qq codeql-linux64.zip -d /usr/local/bin
+          chmod +x /usr/local/bin/codeql
+
       - name: Initialize CodeQL for .NET
         uses: github/codeql-action/init@v2
         with:
