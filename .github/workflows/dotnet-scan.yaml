@@ -37,9 +37,4 @@ jobs:
         with:
           checkout_path: dotnet-code-folder
 
-      - name: Upload SARIF file
-        uses: github/codeql-action/upload-sarif@v2
-        with:
-          # Path to SARIF file relative to the root of the repository
-          sarif_file: csharp.sarif
-          checkout_path: /home/runner/work/test_codeql/test_codeql/results
+
