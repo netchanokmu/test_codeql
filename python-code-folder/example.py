@@ -1,14 +1,13 @@
-# File: example.py
+# example_code.py
 
-def vulnerable_function(user_input):
-    dangerous_query = "SELECT * FROM users WHERE username = '" + user_input + "'"
-    # Vulnerable SQL query, user_input is directly concatenated into the query
+def process_data(user_data):
+    # Example of a potentially insecure print statement
+    print("User data:", user_data)
 
-def safe_function(user_input):
-    safe_query = "SELECT * FROM users WHERE username = %s"
-    # Safer SQL query, using parameterized query to prevent SQL injection
+def main():
+    user_input = input("Enter sensitive data: ")
+    process_data(user_input)
 
 if __name__ == "__main__":
-    user_input = input("Enter username: ")
-    vulnerable_function(user_input)
-    safe_function(user_input)
+    main()
+
