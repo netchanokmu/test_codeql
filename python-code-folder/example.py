@@ -1,16 +1,9 @@
-# command_injection.py
+from flask import Flask, request
+app = Flask(__name__)
 
-import subprocess
-
-def execute_command(user_input):
-    # Example of a potentially insecure command execution
-    command = f"echo {user_input}"
-    result = subprocess.check_output(command, shell=True)
-    print(f"Command result: {result.decode().strip()}")
-
-def main():
-    user_input = input("Enter data: ")
-    execute_command(user_input)
-
-if __name__ == "__main__":
-    main()
+@app.route("/code-execution")
+def code_execution():
+    code = request.args.get("code")
+    exec(code) # NOT OK
+    eval(code) # NOT OK
+    
