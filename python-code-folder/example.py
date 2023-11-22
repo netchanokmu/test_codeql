@@ -1,17 +1,16 @@
-# hardcoded_secret.py
+# command_injection.py
 
-def send_request(api_key, data):
-    # Simulate sending a request with the API key
-    print(f"Sending request with API key: {api_key}")
-    print(f"Data: {data}")
+import subprocess
+
+def execute_command(user_input):
+    # Example of a potentially insecure command execution
+    command = f"echo {user_input}"
+    result = subprocess.check_output(command, shell=True)
+    print(f"Command result: {result.decode().strip()}")
 
 def main():
-    # Example of a potentially insecure hardcoded API key
-    api_key = "your_hardcoded_api_key"
-    user_data = input("Enter sensitive data: ")
-
-    # Send a request with the hardcoded API key and user data
-    send_request(api_key, user_data)
+    user_input = input("Enter data: ")
+    execute_command(user_input)
 
 if __name__ == "__main__":
     main()
