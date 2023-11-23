@@ -2,7 +2,7 @@
 ในโปรเจ็กต์นี้ เป็นตัวอย่างของการเขียน workflows เพื่อใช้ CodeQL เพื่อสแกนโค้ดในภาษาต่าง ๆ เช่น Python
 , Java, .NET และ Terraform 
 
-## Project Structure
+## โครงสร้างของโปรเจ็กต์
 
 - **.github/workflows:**
   - dotnet-scan
