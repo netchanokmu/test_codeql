@@ -1,5 +1,5 @@
 # CodeQL Workflows
-ในโปรเจ็กต์นี้เป็นตัวอย่างของการเขียน workflows เพื่อใช้ CodeQL เพื่อสแกนโค้ดในภาษาต่าง ๆ เช่น Python
+ในโปรเจ็กต์นี้ เป็นตัวอย่างของการเขียน workflows เพื่อใช้ CodeQL เพื่อสแกนโค้ดในภาษาต่าง ๆ เช่น Python
 , Java, .NET และ Terraform เป็นต้น 
 
 ## Project Structure
