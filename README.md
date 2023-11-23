@@ -5,10 +5,10 @@
 ## Project Structure
 
 - **.github/workflows:**
-  - `dotnet-scan`
-  - `java-scan`
-  - `python-scan`
-  - `terraform-scan`
+  - dotnet-scan
+  - java-scan
+  - python-scan
+  - terraform-scan
 
 - **dotnet-code-folder:** 
 - **java-code-folder:** 
