@@ -26,7 +26,7 @@
 โฟลเดอร์ dotnet -code-folder, java -code-folder, python-folder และ terraform-code-folder ประกอบไปด้วยตัวอย่างโค้ดที่เขียนด้วยภาษาที่กำหนด
 
 ## การใช้งาน CodeQL ใน workflows
-### -ในกรณีของภาษา .NET, Java และ Python จะใช้ github/codeql-action
+### -ในกรณีของ .NET, Java และ Python จะใช้ github/codeql-action
 ทำการเพิ่ม step ต่อไปนี้ใน workflow
 
 1. **Initializes the CodeQL tools สำหรับการสแกน**
