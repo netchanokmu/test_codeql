@@ -26,3 +26,7 @@ jobs:
         with:
           source-root: terraform-code-folder
 
+      - name: Upload SARIF file
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          sarif_file: codeql-iac.sarif
